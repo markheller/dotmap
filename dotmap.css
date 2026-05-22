@@ -1,0 +1,552 @@
+/* ////////////////////// */
+/* HOME AND PROJECT PAGES */
+/* ////////////////////// */
+
+:root {
+    --border-color: rgb(120, 120, 120);
+    --background-color: black;
+    --text-color: white;
+    --max-project-width: 600px;
+    --caption-font-size: 12px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 14px;
+    display: flex;
+}
+
+body .italics {
+    font-style: italic;
+}
+
+body .blue {
+    color: cornflowerblue;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    padding: 20px;
+    height: 100vh;
+    border-right: 0.5px solid var(--border-color);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.header {
+    display: none;
+}
+
+.sidebar .about {
+    margin-top: auto;
+    padding-bottom: 35px;
+}
+
+.sidebar hr {
+    width: 100%;
+    height: 0px;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
+.header hr {
+    margin-bottom: 0px;
+}
+
+/* //////// */
+/* HOMEPAGE */
+/* //////// */
+
+.main-content {
+    margin-left: 260px;
+    min-width: 400px;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.project .text {
+    width: 20%;
+    padding-right: 20px;
+    margin-top: -20px;
+    flex-shrink: 0;
+}
+
+.project .image {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.project .image img {
+    width: 100%;
+    height: auto;
+    border: 0.5px solid var(--border-color);
+}
+
+/* ////////// */
+/* ABOUT PAGE */
+/* ////////// */
+
+.about-page {
+    margin-left: 100px;
+    max-width: var(--max-project-width);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about-page .black {
+    color: black;
+}
+
+.footer-text {
+    padding-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+/* ///////////// */
+/* PROJECT PAGES */
+/* ///////////// */
+
+
+/* .project-page {
+    margin-left: 100px;
+    max-width: var(--max-project-width);
+    width: 100%;
+    height: auto;
+} */
+
+.project-page {
+    margin: 20px auto;
+    width: 100%;
+    max-width: var(--max-project-width);
+    padding: 0px;
+    overflow-wrap: break-word;
+}
+
+/* .project-arrow-top {
+    line-height: 75%;
+    display: none;
+}
+
+.project-arrow-bottom {
+    line-height: 75%;
+    display: none;
+    padding-top: 20px;
+} */
+
+.project-header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    line-height: 75%;
+}
+
+.project-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.media-container {
+    max-width: var(--max-project-width);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.video-container-consistent {
+    max-width: var(--max-project-width);
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Maintain 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-container-consistent iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.video-container-variable {
+    max-width: var(--max-project-width);
+    width: 100%;
+    position: relative;
+    padding-bottom: var(--aspect-ratio);
+    height: 0;
+}
+
+.video-container-variable iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-img {
+    max-width: var(--max-project-width);
+    width: 100%;
+    position: relative;
+    border: 0.5px solid var(--border-color);
+}
+
+.project-img img {
+    max-width: 100%;
+    /* Ensures the image scales within the container */
+    height: auto;
+    /* Maintains aspect ratio */
+    display: block;
+    /* Removes any extra space below the image */
+}
+
+.caption {
+    max-width: var(--max-project-width);
+    margin-top: 12px;
+    font-style: italic;
+    font-size: var(--caption-font-size);
+}
+
+
+
+/* ////////// */
+/* FORMATTING */
+/* ////////// */
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
+h1 {
+    font-family: system-ui, sans-serif;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: system-ui, sans-serif;
+    font-size: 18px;
+}
+
+h3 {
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+    list-style-type: circle;
+}
+
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* a:visited {
+    color: gray;
+} */
+
+a:hover {
+    /* color: cornflowerblue; */
+    text-decoration: underline;
+}
+
+/* a:active {
+    color: orange;
+} */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    flex-direction: column;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-overlay {
+    display: none;
+}
+
+
+/* ///////////// */
+/* LIGHTBOX STYLES */
+/* ///////////// */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    display: block;
+    border: 0.5px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -35px;
+    right: 0;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.lightbox-close:hover {
+    color: gray;
+}
+
+/* Add this to the existing CSS to indicate clickable images */
+.project-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-img img {
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.project-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: cornflowerblue;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.project-img:hover::after {
+    opacity: 0.1;
+}
+
+/* ////// */
+/* MOBILE */
+/* ////// */
+
+@media (max-width: 768px) {
+
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: block;
+        /* Stack content vertically */
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        z-index: 1500;
+        border-bottom: 0.5px solid var(--border-color);
+    }
+
+    .header-content {
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    .header h1 {
+        display: inline-block;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+
+    .menu-button {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: static;
+        z-index: 1000;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+    .menu-icon {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+    .sidebar {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        z-index: 2001;
+        background-color: rgba(0, 0, 0, 0.95);
+        border: none;
+    }
+
+    .sidebar.mobile-visible {
+        background-color: rgba(0, 0, 0, 0.95);
+        display: flex !important;
+        transform: translateX(0);
+        border: none;
+    }
+
+    .menu-overlay.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+    }
+
+    .main-content {
+        min-width: 0;
+        margin-left: 0;
+        padding: 20px;
+        padding-top: 70px;
+    }
+    
+    .project {
+        display: block;
+    }
+
+    .project .text,
+    .project .image,
+    .project .image img {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    .about-page {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .project-page {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 0;
+        max-width: none;
+    }
+
+    .media-container,
+    .project-header,
+    .project-description,
+    .media-container,
+    .video-container-consistent,
+    .video-container-consistent iframe,
+    .video-container-variable,
+    .video-container-variable iframe,
+    .project-img,
+    .project-img img,
+    .caption {
+        width: 100%;
+        max-width: none;
+    }
+
+    .footer-text {
+        display:block;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-content, .header {
+        width: 65%;
+        margin-left: 10vw;
+    }
+
+    body, .caption {
+        font-size: 10px;
+    }
+}
