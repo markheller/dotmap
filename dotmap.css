@@ -3,7 +3,7 @@
 /* ////////////////////// */
 
 :root {
-    --border-color: rgb(120, 120, 120);
+    /* --border-color: rgb(120, 120, 120); */
     --background-color: black;
     --text-color: white;
     /* --max-project-width: 600px; */
@@ -15,65 +15,19 @@ html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-}
 
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-        }
-
-        img {
-            max-width: 100vw;
-            max-height: 100vh;
-            object-fit: contain;
-        }
-
-
-/* ////// */
-/* MOBILE */
-/* ////// */
-
-/* @media (max-width: 768px) {
-
-    html {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
     }
 
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-        }
-
-        img {
-            max-width: 100vw;
-            max-height: 100vh;
-            object-fit: contain;
-        }
+    img {
+        max-width: 100vw;
+        max-height: 100vh;
+        object-fit: contain;
+    }
 }
-
-@media (max-width: 768px) and (orientation: landscape) {
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-        }
-
-        img {
-            max-width: 100vw;
-            max-height: 100vh;
-            object-fit: contain;
-        }
-} */
