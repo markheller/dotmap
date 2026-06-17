@@ -6,15 +6,62 @@
     <link rel="stylesheet" href="dotmap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Dot Map</title>
-    <!-- <script src="sidebar.js"></script> -->
+    <script src="sidebar.js"></script>
+    <script src="lightbox.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <!-- Martian Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Rubik -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-    <img src="images/Logo_v2_90.gif" alt="">
-        <footer>
-            <!-- <h3><a href="about.html">About</a></h3> -->
-            <!-- <p>Dot Map, LLC • 2026</p>  -->
-        </footer>
+
+<body class="homepage">
+
+    <div class="container">
+        <aside id="sidebar-container" class="sidebar"></aside>
+
+        <div class="menu-overlay"></div>
+
+        <main class="main-content">
+
+            <!-- slideshow -->
+            <div class="slideshow">
+                <div class="slideshow-container">
+                    <img id="slideA" class="slide active" alt="">
+                    <img id="slideB" class="slide" alt="">
+                </div>
+                <!-- <button class="nav prev">‹</button>
+                <button class="nav next">›</button> -->
+            </div>
+            <div class="caption" id="caption"></div>
+
+            <!-- studio description -->
+            <div class="studio-desc">
+
+                <p>
+                    <span class="studio-logo">dotmap</span>
+
+                    creates beskope spatial analytic visualizations and software for exhibitions,
+                    architecture and landscape projects, and print and digital media.
+
+                    Our work blends cartography, data science, and computational design.
+                </p>
+            </div>
+
+            <div class="studio-founded">
+                <p>
+                    Founded by Mark Heller. Operating from NYC.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script src="slideshow.js"></script>
 </body>
 
 </html>
