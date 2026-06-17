@@ -770,10 +770,10 @@ footer {
 
   .menu-button {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 3003;
+    z-index: 4000;
     background: none;
     border: none;
     padding: 0;
@@ -816,8 +816,8 @@ footer {
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    width: 80%;
-    max-width: 320px;
+    width: 100%;
+    max-width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
@@ -825,6 +825,7 @@ footer {
     z-index: 3002;
     background-color: rgba(0, 0, 0, 0.95);
     margin-left: 10px;
+    margin-left: 0;
   }
 
   .sidebar.mobile-visible {
@@ -835,7 +836,7 @@ footer {
   /* OVERLAY */
   /* ////////////////// */
 
-  .menu-overlay.active {
+  /* .menu-overlay.active {
     display: block;
     position: fixed;
     z-index: 3000;
@@ -845,6 +846,29 @@ footer {
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
 
+  } */
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.95);
+    /* full black */
+
+    z-index: 3000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-overlay.active {
+    background-color: black;
+    opacity: 1;
+    pointer-events: auto;
   }
 
 }
@@ -857,16 +881,16 @@ footer {
   }
 
   .sidebar {
-    width: 75%;
+    /* width: 75%;
     max-width: 260px;
-    font-size: 14px;
+    font-size: 14px; */
 
-    /* overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch; */
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sidebar-list {
-    font-size: 13px;
+    font-size: 14px;
     gap: 5px;
   }
 

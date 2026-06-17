@@ -74,19 +74,19 @@ function setupMobileSidebar() {
 }
 
 function createMobileHeaderIfNeeded() {
-    // Only create mobile header on mobile viewports
     if (window.innerWidth > 768) return;
 
+    // Create overlay if needed
     if (!document.querySelector('.menu-overlay')) {
         const overlay = document.createElement('div');
         overlay.className = 'menu-overlay';
         document.body.appendChild(overlay);
     }
 
+    // Create header (without menu button)
     if (!document.querySelector('.header')) {
         const header = document.createElement('aside');
         header.className = 'header';
-
         header.innerHTML = `
             <div class="header-inner">
                 <div class="logo-image">
@@ -94,13 +94,18 @@ function createMobileHeaderIfNeeded() {
                         <img src="images/Logo.gif" alt="">
                     </a>
                 </div>
-                <button class="menu-button" aria-label="Menu">
-                    <img src="images/menu.png" alt="Menu" class="menu-icon">
-                </button>
             </div>
         `;
-
         document.body.insertBefore(header, document.body.firstChild);
+    }
+
+    // Create floating menu button (outside header)
+    if (!document.querySelector('.menu-button')) {
+        const menuBtn = document.createElement('button');
+        menuBtn.className = 'menu-button';
+        menuBtn.setAttribute('aria-label', 'Menu');
+        menuBtn.innerHTML = `<img src="images/menu.png" alt="Menu" class="menu-icon">`;
+        document.body.appendChild(menuBtn);
     }
 }
 
