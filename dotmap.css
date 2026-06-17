@@ -791,7 +791,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 140px;
+    height: 130px;
     z-index: 3001;
     background-color: var(--background-color);
   }
@@ -844,6 +844,47 @@ footer {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
+
+  }
+
+}
+
+@media (max-width: 390px) {
+
+  :root {
+    --sidebar-width: 260px;
+    --logo-scale: 0.85;
+  }
+
+  .sidebar {
+    width: 75%;
+    max-width: 260px;
+    font-size: 14px;
+
+    /* overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch; */
+  }
+
+  .sidebar-list {
+    font-size: 13px;
+    gap: 5px;
+  }
+
+  .header {
+    height: 110px;
+  }
+
+  .header .logo-image img {
+    max-width: 220px;
+  }
+
+  .main-content,
+  .writing-list {
+    padding-top: 80px;
+  }
+
+  footer {
+    font-size: 12px;
   }
 
 }
