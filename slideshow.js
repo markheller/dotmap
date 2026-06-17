@@ -2,7 +2,7 @@ window.slideshowImages = [
     { src: "images/home/Landscape-Workshop_Web.jpg", caption: "<em>Landscape Workshop</em>, Data x Design Exhibition, 2026" },
     { src: "images/home/Auto-Simulacrum.png", caption: "Computational Rendering of Mt. Hood produced with Auto-Simulacrum, 2020" },
     { src: "images/home/AcrossTheMainland.png", caption: "Still from <em>Across the Mainland</em>, 2020" },
-    { src: "images/home/SitingInvisibleValues.jpg", caption: "Pittsburgh Development Index, Siting Inivisible Values, 2023" },
+    { src: "images/home/SitingInvisibleValues.png", caption: "Pittsburgh Development Index, Siting Inivisible Values, 2023" },
     { src: "images/home/AlphanumericSublime.png", caption: "Composite Still from <em>Alphanumeric Sublime</em>, 2020" },
     { src: "images/home/MetabolicCities_Diagram.png", caption: "Stock and Flow Diagram, Metabolic Cities, 2017" },
     { src: "images/home/Ibex_Perspective.jpg", caption: "Terrain Model of the Grand Canyon produced with Ibex, 2020" }
